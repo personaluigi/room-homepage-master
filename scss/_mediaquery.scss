@@ -1,0 +1,126 @@
+@media screen and (min-width: 1200px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        overflow: hidden;
+
+        .header {
+            position: relative;
+            width: 55%;
+            height: 60vh;
+
+            &-display {
+                padding: 28px;
+                display: flex;
+                align-items: center;
+                gap: 7rem;
+
+                .nav {
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        gap: 2rem;
+                        li {
+                            font-size: 1.3rem;
+                            a {
+                                color: white;
+                                text-decoration: none;
+                                position: relative;
+                                transition: .2s ease;
+                                &:hover {
+                                    color: hsl(0, 0%, 63%);
+                                }
+                                &::before {
+                                    content: '';
+                                    width: 0;
+                                    height: 3px;
+                                    background-color: hsl(0, 0%, 63%);
+                                    position: absolute;
+                                    bottom: -5px;
+                                    left: 50%;
+                                    transform: translate(-50%);
+                                    transition: .3s ease-in-out;
+                                }
+                                &:hover:before {
+                                    width: 80%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                img {
+                    width: 100px;
+                }
+
+                #btn-menu {
+                    display: none;
+                }
+            }
+
+            #buttons {
+                display: flex;
+                background-color: black;
+                position: absolute;
+                bottom: 0;
+                right: -140px;
+
+                button {
+                    width: 70px;
+                    cursor: pointer;
+                    background: none;
+                    border: none;
+                    padding: 12px;
+                    transition: .2s ease;
+
+                    &:hover {
+                        background-color: hsl(0, 0%, 63%);
+                    }
+
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+        }
+
+        .section-feedback {
+            width: 45%;
+            @media screen and (max-width: 1599px) {
+                padding: 2rem 3rem;
+            }
+            padding: 4rem 5rem;
+
+            div {
+                :hover {
+                    color: hsl(0, 0%, 63%);
+                    transition: .2s;
+                }
+
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .section-one {
+            width: 30%;
+            height: 40vh;
+        }
+
+        .section-two {
+            width: 40%;
+            height: 40vh;
+            @media screen and (max-width: 1599px) {
+                padding: 0 3rem;
+            }
+            padding: 1.8rem 5rem;
+        }
+
+        .section-three {
+            width: 30%;
+            height: 40vh;
+        }
+    }
+}

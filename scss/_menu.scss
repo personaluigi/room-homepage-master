@@ -1,0 +1,88 @@
+@media screen and (max-width: 1199px) {
+    .header-display {
+        padding: 18px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+        #btn-menu {
+            z-index: 100;
+            display: flex;
+            position: relative;
+            border: none;
+            background: none;
+            #hamburguer {
+                width: 35px;
+                border-top: 2px solid white;
+                display: block;
+                position: relative;
+                &::before,
+                &::after {
+                    content: '';
+                    width: 35px;
+                    height: 2px;
+                    background-color: white;
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+
+            #hamburguer.menu-active {
+                border-top: 2px solid black;
+                &::before,
+                &::after {
+                    background-color: black;
+                }
+            }
+        }
+        #logo {
+            width: 80px;
+        }
+        .nav {
+            overflow: hidden;
+            width: 0;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            transition: .3s ease-in-out;
+            ul {
+                margin-top: 3rem;
+                margin-left: 4rem;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                li {
+                    font-size: 1.2rem;
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .nav-active {
+            width: 100%;
+        }
+    }
+    
+    #buttons {
+        display: flex;
+        gap: 2rem;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    
+        button {
+            background: none;
+            border: none;
+            padding: 10px;
+    
+            img {
+                width: 20px;
+            }
+        }
+    }
+}
